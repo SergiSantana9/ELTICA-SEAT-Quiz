@@ -1,0 +1,67 @@
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100px !important; /* Añade !important para asegurar que se aplique */
+    padding: 20px 20px !important; /* También puedes usar !important aquí */
+  }
+
+  .nav-bar-brand-logo {
+    /*filter: invert(1);*/
+
+  }
+  
+  .nav-bar-logo img {
+    height: 80px; /* Ajusta la altura del logo según necesites */
+  }
+  
+  .nav-bar-title {
+
+  }
+
+  .nav-bar-title:hover {
+
+    transform: scale(1.05); /* Aumenta el tamaño del texto al pasar el ratón */
+    color: #87f74b; /* Cambia el color al pasar el ratón */
+  }
+
+  .nav-bar-section {
+
+  background-color: #6be30f; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno: 10px arriba y abajo, 20px a los lados */
+  font-size: 36px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+
+  }
+
+  
+.nav-bar-section:hover {
+    background-color: #ed070f; /* Color de fondo al pasar el ratón */
+    transform: translateY(-2px); /* Levanta ligeramente el botón */
+  }
+  
+  .nav-bar-section:active {
+    transform: translateY(1px); /* Presiona el botón hacia abajo */
+  }
+  
+  .nav-bar-share-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .nav-bar-share-icon i {
+    font-size: 50px;
+    color: white;
+  }
+  
+  .nav-bar-share-icon i:hover {
+    color: #5f3bff;
+  }

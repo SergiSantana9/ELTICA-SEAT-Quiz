@@ -1,0 +1,31 @@
+<div class="quiz-container" *ngIf="!quizCompleted">
+  <h1 class="quiz-title">¡Desafía tus conocimientos!</h1>
+
+  <div class="question-section">
+    <h2 class="question">{{ questions[currentQuestionIndex].text }}</h2>
+    <h2>Pregunta {{ currentQuestionIndex + 1 }} de {{ questions.length }}</h2>
+  </div>
+  
+  <div class="answers-section">
+    <ul>
+      <li *ngFor="let option of questions[currentQuestionIndex]?.options; index as i">
+        <!-- Botón para seleccionar una opción -->
+        <button [class.selected]="selectedOption === i" (click)="selectOption(i)">
+          {{ option }}
+        </button>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="navigation-buttons">
+    <button (click)="nextQuestion()">Siguiente</button>
+  </div>
+</div>
+
+<!-- Mostrar resultados al completar el cuestionario -->
+<div class="result-container" *ngIf="quizCompleted">
+  <h2>¡Cuestionario Completado!</h2>
+  <p>Tu puntuación: {{ score }} de {{ questions.length }}</p>
+  <!-- Botón para reiniciar el cuestionario -->
+  <button (click)="restartQuiz()">Reiniciar Cuestionario</button>
+</div>

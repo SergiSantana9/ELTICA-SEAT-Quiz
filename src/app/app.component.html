@@ -1,0 +1,20 @@
+<!-- <app-nav-bar></app-nav-bar> -->
+<!--<app-splash-screen></app-splash-screen> -->
+<!-- <div style="text-align:center; margin-top:50px;">
+  <h1>{{ question }}
+  <button mat-raised-button color="primary" (click)="mostrarMensaje()">
+    
+  </button>
+  <p *ngIf="mensajeVisible" style="margin-top:20px;">
+    ¡Has hecho clic en el botón!
+  </p> -->
+
+  <div class="app-container">
+     
+    <app-splash-screen *ngIf="showSplash" (startQuiz)="onStartQuiz()"></app-splash-screen> 
+    
+      
+    <app-seat-quiz *ngIf="!showSplash"></app-seat-quiz>
+  </div> 
+
+<!--<router-outlet></router-outlet> -->

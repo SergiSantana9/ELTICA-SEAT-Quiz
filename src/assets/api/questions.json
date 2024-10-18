@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "text": "¿Cuál es la capital de Francia?",
+    "options": ["Madrid", "Berlín", "París", "Roma"],
+    "correctAnswer": 2
+  },
+  {
+    "id": 2,
+    "text": "¿Cuál es el planeta más grande del sistema solar?",
+    "options": ["Tierra", "Júpiter", "Saturno", "Marte"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 3,
+    "text": "¿Quién escribió 'Cien Años de Soledad'?",
+    "options": ["Gabriel García Márquez", "Pablo Neruda", "Jorge Luis Borges", "Mario Vargas Llosa"],
+    "correctAnswer": 0
+  },
+  {
+    "id": 4,
+    "text": "¿Cuál es el idioma más hablado en el mundo?",
+    "options": ["Inglés", "Mandarín", "Español", "Hindi"],
+    "correctAnswer": 1
+  }
+
+]

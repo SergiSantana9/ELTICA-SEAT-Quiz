@@ -1,0 +1,10 @@
+
+<div  class="splash-screen">
+    <div *ngIf="showContent" class="splash-question"> {{splashQuestion}}</div>
+    <div *ngIf="showContent" class="splash-question"> {{splashAction}}</div> 
+    <button *ngIf="showContent" class="splash-button" (click)="navigateToQuiz()"> {{splashButton}} </button>
+    <!--<div class="splash-disclaimer"> {{splashDisclaimer}}</div>-->
+    <!--<button class="splash-question" (click)="testFunction()">Probar Navegación</button>-->
+</div>
+
+
