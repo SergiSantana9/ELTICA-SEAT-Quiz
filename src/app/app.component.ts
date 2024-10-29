@@ -9,14 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   showSplash = true; // Estado inicial para mostrar la splash screen
-  title = 'SEAT QUIZ App';
-  question = "How much you know about your SEAT Ibiza?";
-  splashbutton = "Let's Quiz!"
-  mensajeVisible = false;
-
-  mostrarMensaje() {
-    this.mensajeVisible = true;
-  }
 
     // Método para iniciar el quiz
     onStartQuiz() {
