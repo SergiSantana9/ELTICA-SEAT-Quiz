@@ -23,3 +23,23 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 ## Procedimiento
 
 Crear un repositorio en tu espacio de GitHub y sigue las instrucciones del PDF que se encuentra en el apartado de documentación o en el repositorio de archivos del Atenea.
+
+
+## Como ejecutar esta aplicación
+
+1) Clona el repositorio:
+  ```bash
+  git clone https://github.com/SergiSantana9/ELTICA-SEAT-Quiz.git
+
+2) Instala las dependecias
+  ```bash
+  npm install
+  
+3) Sirve la aplicación
+
+  ```bash
+  ng serve
+
+4) Accede a la url http://localhost:4200 en un navegador
+
+
