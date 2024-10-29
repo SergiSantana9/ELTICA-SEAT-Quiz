@@ -22,4 +22,4 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 ## Procedimiento
 
-Crear un repositorio en tu espacio de GitHub y sigue las instrucciones del PDF que se encuentra en el partado de documentación o en el repositorio de archivos del Atenea.
+Crear un repositorio en tu espacio de GitHub y sigue las instrucciones del PDF que se encuentra en el apartado de documentación o en el repositorio de archivos del Atenea.
