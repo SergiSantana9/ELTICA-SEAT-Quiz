@@ -1,67 +1,200 @@
+/* Contenedor principal del cuestionario */
 .quiz-container {
-    background: linear-gradient(to right, #f43708, #f5dbdb);
-    border-radius: 15px;
-    padding: 20px;
-    max-width: 600px;
-    margin: 20px auto;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 19.95px; /* incrementado en 5% */
+  background-color: transparent;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Título del cuestionario */
+.quiz-title {
+  font-size: 2.058rem; /* incrementado en 5% */
+  color: #020202;
+  margin-bottom: 19.95px; /* incrementado en 5% */
+  text-align: center;
+  text-shadow: 2.058px 2.058px 8.085px rgba(0, 0, 0, 0.3); /* incrementado en 5% */
+}
+
+/* Sección de la pregunta */
+.question-section {
+  margin-bottom: 19.95px; /* incrementado en 5% */
+  background: rgba(0, 0, 0, 0.2);
+  padding: 14.7px 25.2px; /* incrementado en 5% */
+  border-radius: 8.085px; /* incrementado en 5% */
+  box-shadow: 0px 4.095px 10.29px rgba(0, 0, 0, 0.2); /* incrementado en 5% */
+  text-align: center;
+  width: 100%;
+  max-width: 617.4px; /* incrementado en 5% */
+  animation: slideIn 0.8s ease-in-out;
+}
+
+/* Estilo de las preguntas */
+.question-section .question {
+  font-size: 1.4385rem; /* incrementado en 5% */
+  color: #fff;
+  margin-bottom: 3.675px; /* incrementado en 5% */
+}
+
+/* Sección de respuestas */
+.answers-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.35px; /* incrementado en 5% */
+}
+
+/* Estilo de cada opción de respuesta */
+.answer-option {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 25.725px; /* incrementado en 5% */
+  padding: 10.29px 20.58px; /* incrementado en 5% */
+  font-size: 1.134rem; /* incrementado en 5% */
+  cursor: pointer;
+  width: 100%;
+  max-width: 514.5px; /* incrementado en 5% */
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0px 6.174px 12.348px rgba(0, 0, 0, 0.2); /* incrementado en 5% */
+}
+
+/* Resaltar la opción seleccionada */
+.answer-option.selected {
+  background-color: #068206;
+}
+
+/* Efecto hover de las opciones */
+.answer-option:hover {
+  background-color: #66BB6A;
+  transform: scale(1.05);
+}
+
+/* Estilo de los botones de navegación tipo Game Boy */
+.navigation-buttons {
+  display: flex;
+  gap: 7.7175px; /* incrementado en 5% */
+  margin-top: 10.29px; /* incrementado en 5% */
+}
+
+/* Estilo para el botón de flecha */
+.navigation-buttons button {
+  width: 51.45px; /* incrementado en 5% */
+  height: 51.45px; /* incrementado en 5% */
+  background-color: #ff5f57;
+  color: white;
+  border: none;
+  border-radius: 10.29px; /* incrementado en 5% */
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 6.174px 12.348px rgba(0, 0, 0, 0.2); /* incrementado en 5% */
+}
+
+/* Efecto hover para botones de navegación */
+.navigation-buttons button:hover:not([disabled]) {
+  background-color: #ff856d;
+  transform: scale(1.1);
+}
+
+/* Icono de flecha para botón "Anterior" */
+.navigation-buttons button:first-child::before {
+  content: '';
+  border: solid white;
+  border-width: 0 4.095px 4.095px 0; /* incrementado en 5% */
+  display: inline-block;
+  padding: 8.085px; /* incrementado en 5% */
+  transform: rotate(135deg); /* Flecha apuntando a la izquierda */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+/* Icono de flecha para botón "Siguiente" */
+.navigation-buttons button:last-child::before {
+  content: '';
+  border: solid white;
+  border-width: 0 4.095px 4.095px 0; /* incrementado en 5% */
+  display: inline-block;
+  padding: 8.085px; /* incrementado en 5% */
+  transform: rotate(-45deg); /* Flecha apuntando a la derecha */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Deshabilitar botón de navegación */
+.navigation-buttons button:disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Contenedor de resultados */
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 19.95px; /* incrementado en 5% */
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10.29px; /* incrementado en 5% */
+  box-shadow: 0px 8.232px 20.58px rgba(0, 0, 0, 0.3); /* incrementado en 5% */
+  animation: fadeIn 1.5s ease-in-out;
+  text-align: center;
+}
+
+/* Estilos de los mensajes de resultados */
+#result-complete, #result-score {
+  color: #fff;
+  font-size: 1.5435rem; /* incrementado en 5% */
+  margin: 10.29px 0; /* incrementado en 5% */
+}
+
+/* Estilo del botón de reinicio */
+.result-container button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 25.725px;
+  padding: 10.29px 20.58px; /* incrementado en 5% */
+  font-size: 1.029rem; /* incrementado en 5% */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 6.174px 12.348px rgba(0, 0, 0, 0.2); /* incrementado en 5% */
+  margin-top: 19.95px; /* incrementado en 5% */
+}
+
+/* Efecto hover del botón de reinicio */
+.result-container button:hover {
+  background-color: #66BB6A;
+  transform: scale(1.05);
+}
+
+/* Animación de deslizamiento */
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10.29px); /* incrementado en 5% */
   }
-  
-  .quiz-title {
-    font-size: 2em;
-    color: #fff;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
-  
-  .question-section {
-    margin-bottom: 20px;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
   }
-  
-  .question {
-    font-size: 1.5em;
-    color: #fff;
+  to {
+      opacity: 1;
   }
-  
-  .answers-section {
-    margin-bottom: 20px;
-    
-  }
-  
-  .answer-option {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin: 10px 0;
-    padding: 10px;
-    transition: transform 0.2s;
-  }
-  
-  .answer-option:hover {
-    transform: scale(1.05);
-  }
-  
-  .navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  button {
-    background: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background 0.3s, transform 0.2s;
-  }
-  
-  button:hover {
-    background: #ee2222;
-    transform: scale(1.05);
-  }
-  
-  button:disabled {
-    background: #ddd;
-    cursor: not-allowed;
-  }
+}

@@ -1,31 +1,34 @@
 <div class="quiz-container" *ngIf="!quizCompleted">
-  <h1 class="quiz-title">¡Desafía tus conocimientos!</h1>
+  <h1 class="quiz-title">{{ quizTitle }}</h1>
 
-  <div class="question-section">
+  <div class="question-section" *ngIf="questions && questions.length > 0">
     <h2 class="question">{{ questions[currentQuestionIndex].text }}</h2>
     <h2>Pregunta {{ currentQuestionIndex + 1 }} de {{ questions.length }}</h2>
   </div>
   
   <div class="answers-section">
     <ul>
-      <li *ngFor="let option of questions[currentQuestionIndex]?.options; index as i">
+      <div *ngFor="let option of questions[currentQuestionIndex]?.options; index as i">
         <!-- Botón para seleccionar una opción -->
-        <button [class.selected]="selectedOption === i" (click)="selectOption(i)">
+        <button class="answer-option" [class.selected]="selectedOption === i" (click)="selectOption(i)">
           {{ option }}
         </button>
-      </li>
+      </div>
     </ul>
   </div>
   
   <div class="navigation-buttons">
-    <button (click)="nextQuestion()">Siguiente</button>
+    <!-- Botón para ir a la pregunta anterior, deshabilitado en la primera pregunta -->
+    <button (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0"></button>
+    <!-- Botón para ir a la siguiente pregunta -->
+    <button (click)="nextQuestion()"></button>
   </div>
 </div>
 
 <!-- Mostrar resultados al completar el cuestionario -->
 <div class="result-container" *ngIf="quizCompleted">
-  <h2>¡Cuestionario Completado!</h2>
-  <p>Tu puntuación: {{ score }} de {{ questions.length }}</p>
+  <div id="result-complete">¡Gracias por participar!</div>
+  <div id="result-score">Tu puntuación: {{ score }} de {{ questions.length }}</div>
   <!-- Botón para reiniciar el cuestionario -->
-  <button (click)="restartQuiz()">Reiniciar Cuestionario</button>
+  <button (click)="restartQuiz()">Reiniciar</button>
 </div>

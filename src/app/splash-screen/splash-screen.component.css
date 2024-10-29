@@ -1,156 +1,77 @@
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Oculta todas las barras de desplazamiento */
-}
-.splash-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra horizontalmente */
-    justify-content: flex-start; /* Alinea al principio (parte superior) */
-    padding-top: 50px; /* Espacio desde la parte superior */
-    background-image: url(./../../assets/seat-leon-back2.jpg); /* Cambia por la URL de tu imagen de fondo */
-    height: 100%;
-  
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; /* No se repite */
-    background-attachment: fixed; /* Fija la imagen al fondo */
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    /*animation: bg-pulse 5s ease-in-out infinite;*/
-    opacity: 90%;
+/* Estilos para la pantalla de bienvenida */
+.welcome-screen {
+    display: flex; /* Usa flexbox para organizar los elementos en el contenedor */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    height: 50%; /* Ocupa toda la altura de la pantalla */
+    background-color: transparent; /* Fondo transparente */
+    padding: 20px; /* Espaciado interno */
+    animation: fadeIn 1.5s ease-in-out; /* Animación de entrada */
 }
 
-
-.splash-screen2 {
-    background-image: url(./../../assets/seat-ibiza-splash.png); /* Cambia por la URL de tu imagen de fondo */
-    background-size: cover; /* Cubre todo el contenedor */
-    background-repeat: no-repeat; /* No se repite */
-    background-position: center center; /* Centrado */
-    background-attachment: fixed; /* Fija la imagen al fondo */
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra horizontalmente */
-    justify-content: flex-start; /* Alinea al principio (parte superior) */
-    height: 100vh;
-    padding-top: 50px; /* Espacio desde la parte superior */
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: #ffffff;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    /*animation: bg-pulse 5s ease-in-out infinite; */
-  }
-
-  .splash-disclaimer {
-    
-    font-size: 18px;
-
-  }
-
-/* Estilos generales del splash screen 
-.splash-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Divertido */
-   /* color: #ffffff;
-    text-align: center;
-    overflow: hidden;
-    animation: bg-pulse 5s ease-in-out infinite;
-    position: relative; 
-  }*/
-  
-  /* Animación de pulsación del fondo */
-  @keyframes bg-pulse {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  /* Estilo para las preguntas */
-  .splash-question {
-    font-size: 20px;
-    margin: 20px 0;
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* Efecto de rebote en las preguntas */
-  .splash-question:hover {
-    transform: scale(1.05) rotate(-1deg);
-    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Estilo para el botón */
-  .splash-button {
-    font-size: 1.5rem;
-    padding: 15px 40px;
-    margin-top: 30px;
-    background-color: #f90808;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  /* Animación de rebote del botón */
-  .splash-button:hover {
-    background-color: #ff9a9e;
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
-  }
-  
-  /* Animación vibrante del botón al hacer clic */
-  .splash-button:active {
-    transform: scale(0.95);
-  }
-  
-  /* Estrellas en el fondo para un toque gamificado 
-  .splash-screen::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://i.ibb.co/ZVzbb6h/stars.png') repeat;
-    opacity: 0.5;
-    z-index: -1;
-    animation: moveStars 30s linear infinite;
-  }*/
-  
-  /* Animación de las estrellas */
-  @keyframes moveStars {
-    0% { background-position: 0 0; }
-    100% { background-position: 10000px 5000px; }
-  }
-  
-  /* Responsividad para pantallas pequeñas */
-  @media screen and (max-width: 768px) {
-    .splash-question {
-      font-size: 1.5rem;
+/* Animación de entrada para el contenedor */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; /* Comienza siendo invisible */
+        transform: translateY(-20px); /* Comienza ligeramente desplazado hacia arriba */
     }
-    
-    .splash-button {
-      font-size: 1.2rem;
-      padding: 10px 30px;
+    to { 
+        opacity: 1; /* Termina siendo completamente visible */
+        transform: translateY(0); /* Vuelve a su posición original */
     }
-  }
+}
 
+/* Estilos para las preguntas */
+.welcome-question {
+    font-size: 1.6rem; /* Tamaño de fuente más grande para destacar las preguntas */
+    color: #fff; /* Color de texto blanco para contraste */
+    margin: 15px 0; /* Espacio arriba y abajo entre las preguntas */
+    text-align: center; /* Centra el texto */
+    background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para resaltar las preguntas */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de tarjeta */
+    animation: slideIn 0.8s ease-in-out; /* Animación de deslizamiento */
+    transform-origin: left; /* Punto de inicio de la animación */
+}
+
+/* Animación para las preguntas */
+@keyframes slideIn {
+    from { 
+        opacity: 0; /* Comienza siendo invisible */
+        transform: translateX(-30px) rotate(-3deg); /* Comienza ligeramente desplazado a la izquierda y rotado */
+    }
+    to { 
+        opacity: 1; /* Termina siendo completamente visible */
+        transform: translateX(0) rotate(0); /* Vuelve a su posición y rotación original */
+    }
+}
+
+/* Estilos para el botón */
+.welcome-button {
+    background-color: #ff5f57; /* Color de fondo rojo para captar la atención */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* Bordes redondeados para un aspecto moderno */
+    padding: 15px 30px; /* Espaciado interno */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto de transición */
+    margin-top: 20px; /* Espacio superior */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto de elevación */
+    animation: pulse 1s infinite alternate; /* Animación de "pulso" */
+}
+
+/* Animación de "pulso" para el botón */
+@keyframes pulse {
+    0% { transform: scale(1); } /* Tamaño original */
+    100% { transform: scale(1.1); } /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto hover del botón */
+.welcome-button:hover {
+    background-color: #ff856d; /* Cambia el color de fondo al pasar el ratón */
+    transform: scale(1.15); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4); /* Sombra más grande en hover */
+}

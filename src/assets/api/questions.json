@@ -1,27 +1,62 @@
 [
   {
     "id": 1,
-    "text": "¿Cuál es la capital de Francia?",
-    "options": ["Madrid", "Berlín", "París", "Roma"],
-    "correctAnswer": 2
+    "text": "¿Cuándo se inició la producción del primer SEAT León?",
+    "options": ["1999", "2000", "1998", "2001"],
+    "correctAnswer": 0
   },
   {
     "id": 2,
-    "text": "¿Cuál es el planeta más grande del sistema solar?",
-    "options": ["Tierra", "Júpiter", "Saturno", "Marte"],
+    "text": "¿En qué año se presentó la segunda generación del SEAT León?",
+    "options": ["2005", "2006", "2007", "2008"],
     "correctAnswer": 1
   },
   {
     "id": 3,
-    "text": "¿Quién escribió 'Cien Años de Soledad'?",
-    "options": ["Gabriel García Márquez", "Pablo Neruda", "Jorge Luis Borges", "Mario Vargas Llosa"],
+    "text": "¿Cuál es la plataforma utilizada por el SEAT León de tercera generación?",
+    "options": ["MQB", "PQ35", "PQ46", "MFA"],
     "correctAnswer": 0
   },
   {
     "id": 4,
-    "text": "¿Cuál es el idioma más hablado en el mundo?",
-    "options": ["Inglés", "Mandarín", "Español", "Hindi"],
+    "text": "¿Cuál es el modelo deportivo más potente del SEAT León?",
+    "options": ["León FR", "León Cupra", "León Xcellence", "León TGI"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 5,
+    "text": "¿En qué año se lanzó la tercera generación del SEAT León?",
+    "options": ["2010", "2011", "2012", "2013"],
+    "correctAnswer": 2
+  },
+  {
+    "id": 6,
+    "text": "¿Cuál es el nombre de la versión familiar del SEAT León?",
+    "options": ["León X-Perience", "León Sport", "León Hatchback", "León Cabrio"],
+    "correctAnswer": 0
+  },
+  {
+    "id": 7,
+    "text": "¿Qué fabricante forma parte del grupo que produce el SEAT León?",
+    "options": ["Ford", "Volkswagen", "BMW", "Renault"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 8,
+    "text": "¿Cuál fue la motorización del primer SEAT León Cupra R?",
+    "options": ["1.8 TSI", "2.0 TSI", "2.0 TDI", "1.6 TDI"],
+    "correctAnswer": 1
+  },
+  {
+    "id": 9,
+    "text": "¿Cuál es la variante híbrida del SEAT León de cuarta generación?",
+    "options": ["León eHybrid", "León TGI", "León Eco", "León FR Hybrid"],
+    "correctAnswer": 0
+  },
+  {
+    "id": 10,
+    "text": "¿Cuál fue el principal mercado de exportación del SEAT León en sus primeras generaciones?",
+    "options": ["Italia", "Alemania", "Reino Unido", "Francia"],
     "correctAnswer": 1
   }
-
 ]

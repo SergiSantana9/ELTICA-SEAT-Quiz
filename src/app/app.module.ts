@@ -14,6 +14,7 @@ import { SeatQuizComponent } from './seat-quiz/seat-quiz.component';
 // Importamos HttpClientModule para realizar solicitudes HTTP
 import { HttpClientModule } from '@angular/common/http';
 import { QuestionService } from './services/question.service';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { QuestionService } from './services/question.service';
     AppComponent,
     NavBarComponent,
     SplashScreenComponent,
-    SeatQuizComponent
+    SeatQuizComponent,
+    DisclaimerComponent
   ],
   imports: [
     BrowserModule,

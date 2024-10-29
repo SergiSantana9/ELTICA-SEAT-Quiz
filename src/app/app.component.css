@@ -1,33 +1,9 @@
 .app-container {
-  height: 100vh; /* Abarca toda la altura del viewport */
+  height: 100%; /* Abarca toda la altura del viewport */
   width: 100%;
-  background-image: url('/../../assets/seat-leon-back2.jpg'); /* Reemplaza con la ruta de tu imagen */
+  background-image: url('/../../assets/leon-wallpaper.jpg'); /* Reemplaza con la ruta de tu imagen */
   background-size: cover; /* Ajusta el tamaño del fondo */
   background-position: center; /* Centra el fondo */
   background-repeat: no-repeat; /* Evita la repetición del fondo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.app-container2 { 
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  justify-content: flex-start; /* Alinea al principio (parte superior) */
-  padding-top: 50px; /* Espacio desde la parte superior */
-  background-image: url("./../assets/seat-leon-back2.jpg"); /* Cambia por la URL de tu imagen de fondo */
-  height: 100%;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; /* No se repite */
-  background-attachment: fixed; /* Fija la imagen al fondo */
-  color: white;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  /*animation: bg-pulse 5s ease-in-out infinite;*/
-  opacity: 90%;
-
-}
