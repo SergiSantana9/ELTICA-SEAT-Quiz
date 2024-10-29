@@ -2,11 +2,11 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-splash-screen',
-  templateUrl: './splash-screen.component.html',
-  styleUrls: ['./splash-screen.component.css']
+  selector: 'app-welcome-screen',
+  templateUrl: './welcome-screen.component.html',
+  styleUrls: ['./welcome-screen.component.css']
 })
-export class SplashScreenComponent {
+export class WelcomeScreenComponent {
 
 
   @Output() startQuiz = new EventEmitter<void>(); // Emisor de eventos

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SplashScreenComponent } from './splash-screen.component';
+import { WelcomeScreenComponent } from './welcome-screen.component';
 
 describe('SplashScreenComponent', () => {
   let component: SplashScreenComponent;

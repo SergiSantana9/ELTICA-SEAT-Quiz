@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { SplashScreenComponent } from './splash-screen/splash-screen.component';
+import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
 import { SeatQuizComponent } from './seat-quiz/seat-quiz.component';
 
 
@@ -21,7 +21,7 @@ import { DisclaimerComponent } from './disclaimer/disclaimer.component';
   declarations: [
     AppComponent,
     NavBarComponent,
-    SplashScreenComponent,
+    WelcomeScreenComponent,
     SeatQuizComponent,
     DisclaimerComponent
   ],
